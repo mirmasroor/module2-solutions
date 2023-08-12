@@ -1,0 +1,65 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  .section {
+    width: calc(33.33% - 20px); /* Three sections with some spacing between */
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  .section-title {
+    position: center;
+    top: 10px;
+    right: 10px;
+    padding-bottom: 5px;
+    background-color: #d8cfc9;
+    color: white;
+    border: 3px solid black;
+    font-size: 25% larger;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 991px) {
+    .container {
+      flex-wrap: wrap;
+    }
+    
+    .section {
+      width: calc(50% - 20px); /* Two sections in tablet view */
+    }
+  
+    .section:last-child {
+      width: 100%; /* Full width for the last section */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .section {
+      width: 100%; /* Full width in mobile view */
+    }
+  }
+  
